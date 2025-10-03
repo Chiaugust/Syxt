@@ -3,11 +3,14 @@
 <head>
   <title>Redirect Example</title>
   <script>
-    // Redirect after page loads
-    window.onload = function() {
-      window.location.href = "https://youtube.com/@iam_syxt?si=flfHvxOzEe_Vx5k1"; // Replace with your link
-    };
-  </script>
+  // Try opening in YouTube app
+  window.location = "vnd.youtube://youtube.com/@iam_syxt";
+  
+  // Fallback to web if app isn’t available
+  setTimeout(function() {
+    window.location = "https://youtube.com/@iam_syxt";
+  }, 1000);
+</script>
 </head>
 <body>
  
